@@ -20,3 +20,10 @@ FSqrt=sqrt(255.*imgD);
 
 %Funcion logaritmica
 FLog=255.*((log(1+imgD))/(log(1+255)));
+
+%Conversion de double a uint8
+imgFC=uint8(FC);
+imgFCub=uint8(FCub);
+imgFSqrt=uint8(FSqrt);
+imgFLog=uint8(FLog);
+
