@@ -27,3 +27,20 @@ imgFCub=uint8(FCub);
 imgFSqrt=uint8(FSqrt);
 imgFLog=uint8(FLog);
 
+%Mostramos
+figure()
+subplot(2,3,1)
+imshow(img)
+title('Original')
+subplot(2,3,2)
+imshow(imgFC);
+title('Función cuadrada')
+subplot(2,3,3)
+imshow(imgFCub)
+title('Funcion cubica')
+subplot(2,3,4)
+imshow(imgFSqrt)
+title('Funcion raiz cuadrada')
+subplot(2,3,5)
+imshow(imgFLog)
+title('Funcion logaritmica')
