@@ -57,4 +57,4 @@ En donde 'variable' representa la variable que contiene a la imágen, 'nombre de
 #### Nota
 Para multiplicar los elementos de dos imágenes se usa el operador **.\*** y para elevar la potencia, los elementos de una imagen se usa **.^**
 
-<a href="https://github.com/ArturoEmmanuelToledoAguado/Operaciones">Código</a>
+<a href="https://github.com/ArturoEmmanuelToledoAguado/Transformaciones-comunes">Código</a>
