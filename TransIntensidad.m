@@ -3,23 +3,29 @@ clear all;
 close all;
 
 %Abrir imagen
-img=imread('IMG/1.jpg');
+imgc=imread('IMG/cua.jpg');
+imgcub=imread('IMG/cub.jpg');
+imglog=imread('IMG/log.jpg');
+imgsqr=imread('IMG/sqr.jpg');
 
 %Convertimos de uint8 a double
-imgD=double(img);
+imgDc=double(imgc);
+imgDcub=double(imgcub);
+imgDlog=double(imglog);
+imgDsqr=double(imgsqr);
 
 %Funcion cuadrada
 div=1/255;
-FC=(imgD.^2).*div;
+FC=(imgDc.^2).*div;
 
 %Funcion cubica
-FCub=(imgD.^3).*(div^2);
+FCub=(imgDcub.^3).*(div^2);
 
-%Funcion raíz cuadrada
-FSqrt=sqrt(255.*imgD);
+%Funcion raÃ­z cuadrada
+FSqrt=sqrt(255.*imgDsqr);
 
 %Funcion logaritmica
-FLog=255.*((log(1+imgD))/(log(1+255)));
+FLog=255.*((log(1+imgDlog))/(log(1+255)));
 
 %Conversion de double a uint8
 imgFC=uint8(FC);
@@ -29,18 +35,30 @@ imgFLog=uint8(FLog);
 
 %Mostramos
 figure()
-subplot(2,3,1)
-imshow(img)
+subplot(1,2,1)
+imshow(imgc)
 title('Original')
-subplot(2,3,2)
+subplot(1,2,2)
 imshow(imgFC);
-title('Función cuadrada')
-subplot(2,3,3)
+title('FunciÃ³n cuadrada')
+figure()
+subplot(1,2,1)
+imshow(imgcub)
+title('Original')
+subplot(1,2,2)
 imshow(imgFCub)
 title('Funcion cubica')
-subplot(2,3,4)
+figure()
+subplot(1,2,1)
+imshow(imgsqr)
+title('Original')
+subplot(1,2,2)
 imshow(imgFSqrt)
 title('Funcion raiz cuadrada')
-subplot(2,3,5)
+figure()
+subplot(1,2,1)
+imshow(imglog)
+title('Original')
+subplot(1,2,2)
 imshow(imgFLog)
 title('Funcion logaritmica')
